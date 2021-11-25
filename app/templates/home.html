@@ -1,0 +1,53 @@
+{% extends "hometemplate.html" %}
+
+{% set active_page = "home" %}
+
+{% block content %}
+    <div class="jumbotron text-white bg-transparent m-4" id="jumbotron" style="background-image: url('static/ai_background_transBLABLA.jpg'); background-size: auto 100%; background-repeat: no-repeat;">
+        <div class="container fadeIn bg-transparent">
+            <h3 class="display-3">Sistema Predictivo de Celda de Flotacion</h3>
+            Sistema predictivo para ver las muestras de laboratorio para en los niveles de impurezas en el concentrado de salida.
+            Si pudieran predecir los niveles de impurezas de SiO2 temprano, sus ingenieros podrían tomar medidas correctivas y garantizar que la calidad del producto siga siendo alta y ya no se desperdicie.
+        </div>
+    </div>
+</div>
+<div class="album py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 fadeInUp">
+                <div class="card mb-4 shadow">
+                    <div class="d-flex justify-content-center text-muted mt-4 icons">
+                        <span class="fa fa-flask fa-4x"></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Hacer la Prediccion</h4>
+                        <p> Hacer la prediccion utilizando modelo de Machine Learning. </p>
+                        <p><a class="btn btn-secondary" href="{{ url_for('diagnose') }}" role="button">Ver Detalles &raquo;</a></p>
+                    </div>
+                </div></div>
+            <div class="col-md-4 fadeInUp first">
+                <div class="card mb-4 shadow">
+                    <div class="d-flex justify-content-center text-muted mt-4  icons">
+                        <span class="fa fa-bar-chart fa-4x"></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Ver la data</h4>
+                        <p>Ver la data usando un modelo entrandoView the data used to train the model, asi como visualisaciones relevantes. </p>
+                        <p><a class="btn btn-secondary" href="/dashapp/" role="button">Ver detalles &raquo;</a></p>
+                    </div>
+                </div></div>
+            <div class="col-md-4 fadeInUp second">
+                <div class="card mb-4 shadow">
+                    <div class="d-flex justify-content-center text-muted mt-4 icons">
+                        <span class="fa fa-file-text-o fa-4x"></span>
+                    </div>
+                    <div class="card-body text-center">
+                        <h4>Aprende como se hizo</h4>
+                        <p>Lea un resumen del proceso utilizado para entrenar el modelo de aprendizaje automático.</p>
+                        <p><a class="btn btn-secondary" href="{{ url_for('about') }}" role="button">Ver detalles &raquo;</a></p>
+                    </div>
+                </div></div>
+        </div>
+    </div>
+</div>
+{% endblock %}
